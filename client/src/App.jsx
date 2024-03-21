@@ -4,6 +4,7 @@ import CreateEmployee from './CreateEmployee'
 import './App.css'
 import Employee from './Employee'
 import axios from 'axios'
+import UpdateEmployee from './UpdateEmployee'
 
 function App() {
   
@@ -17,13 +18,13 @@ function App() {
     fetchEmployees()
   }, [])
 
-  console.log(employee)
 
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Employee employeeList={employee}/>}/>
         <Route path='/create' element={<CreateEmployee />}/>
+        <Route path='/update/:id' element={<UpdateEmployee employeeList={employee}/>}/>
       </Routes>
     </Router>
   )

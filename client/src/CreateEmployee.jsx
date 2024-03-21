@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import axios from "axios"
 
 
 const CreateEmployee = () => {
@@ -18,10 +19,19 @@ const handleFormChange = (e) => {
     }})
 }
 
+const handleFormSubmit = async(e) => {
+    try{
+        await axios.post(`http://localhost:3000/create`, employee)
+        window.location.reload()
+    } catch(err) {
+        console.log(err)
+    }
+}
+
     return (
         <div>
             <Link to='/' className="btn">Back</Link>
-            <form>
+            <form onSubmit={handleFormSubmit}>
                 <h3>New Employee</h3>
                 <input 
                     type="text"
