@@ -4,85 +4,10 @@ import axios from "axios"
 
 const UpdateEmployee = ({employeeList}) => {
 
-//     const navigate = useNavigate()
-//     const location = useLocation()
-//     const employeeId = location.pathname.split('/')[2]
-//     const user = employeeList.filter(employee => employee.id == employeeId)
-//     const [filterUser, setFilterUser] = useState(user)
-
-    
-
-//     console.log(employeeId)
-//     console.log(filterUser)
-
-//     const [employee, setEmployee] = useState({
-//         fName:'',
-//         lName:'',
-//         email:''
-//     })
-
-// const handleFormChange = (e) => {
-//     e.preventDefault()
-//     const {name, value} = e.target
-//     setEmployee(prevState => {
-//         return {
-//         ...prevState, [name]: value 
-//     }})
-// }
-
-// const handleFormSubmit = async(e) => {
-//     e.preventDefault()
-//     try{
-//         await axios.put(`http://localhost:3000/create/`+ employeeId, employee)
-        
-//         navigate('/')
-//         window.location.reload()
-//     } catch(err) {
-//         console.log(err)
-//     }
-// }
-
-//     return (
-//         <div>
-//             <Link to='/' className="btn">Back</Link>
-//             <form onSubmit={handleFormSubmit}>
-//                 <h3>Update Employee</h3>
-//                 <input 
-//                     type="text"
-//                     placeholder="First Name"
-//                     name="fName"
-//                     value={employee.fName}
-//                     onChange={handleFormChange}
-//                 />
-//                 <input 
-//                 type="text"
-//                     placeholder="Last Name"
-//                     name="lName"
-//                     value={employee.lName}
-//                     onChange={handleFormChange}
-//                 />
-//                 <input 
-//                 type="email"
-//                     placeholder="Email"
-//                     name="email"
-//                     value={employee.email}
-//                     onChange={handleFormChange}
-//                 />
-//                 <button className="btn">Submit</button>
-//             </form>
-//         </div>
-//     )
-
     const navigate = useNavigate()
     const location = useLocation()
 
     const employeeId = location.pathname.split('/')[2]
-    // const user = employeeList.filter(employee => employee.id == employeeId)
-    // const newUserObject = {
-    //     fName: user[0].fName,
-    //     lName: user[0].lName,
-    //     email: user[0].email
-    // }
     const [filterUser, setFilterUser] = useState([])
     
 
